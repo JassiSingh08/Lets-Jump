@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#board{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+#character{
+    background-color: #888;
+    position: relative;
+    top: 200px;
+    height: 100px ;
+    width: 50px;
+}
+
+.animate{
+    animation: jump 500ms;
+}
+
+
+#block{
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: relative;
+    top: 180px;
+    left: 580px;
+    animation: block 1s infinite linear ;
+}
+
+@keyframes block{
+    0%{left:580px;}
+    100%{left:-5px;}
+}
+@keyframes jump{
+     0%{top: 200px;}
+     30%{top: 150px;}
+     70%{top: 150px;}
+     100%{top: 200px;}
+}
