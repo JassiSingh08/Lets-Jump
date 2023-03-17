@@ -5,112 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hey Dinosaur</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <style>
-        #game-over, #restart-button {
-  display: none;
-  color:red;
-}
-
-#game-over {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 30px;
-}
-
-#restart-button {
-  margin-top: 20px;
-}
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!--     <div id="board">
+    <div id="board">
         <div id="character"></div>
         <div id="block"></div>
-    </div> -->
-    <div id="game-container">
-        <div id="character"></div>
-        <div id="block"></div>
-        <div id="score">Score: 0</div>
-        <div id="game-over">Game Over! Your score is <span id="final-score"></span></div>
-        <button id="restart-button">Restart Game</button>
-      </div>      
-    <!-- <script src="script.js"></script> -->
-    <script>
-        const character = document.getElementById('character');
-const block = document.getElementById('block');
-const scoreDisplay = document.getElementById('score');
-const gameOverDisplay = document.getElementById('game-over');
-const finalScoreDisplay = document.getElementById('final-score');
-const restartButton = document.getElementById('restart-button');
-let isJumping = false;
-let score = 0;
-
-function jump() {
-  if (isJumping) return;
-  isJumping = true;
-  let currentPosition = 0;
-  let timerId = setInterval(function () {
-    if (currentPosition === 150) {
-      clearInterval(timerId);
-      let downTimerId = setInterval(function () {
-        if (currentPosition === 0) {
-          clearInterval(downTimerId);
-          isJumping = false;
-        }
-        currentPosition -= 20;
-        character.style.bottom = currentPosition + 'px';
-      }, 20);
-    }
-    currentPosition += 20;
-    character.style.bottom = currentPosition + 'px';
-  }, 20);
-}
-
-document.addEventListener('keydown', function (event) {
-  if (event.code === 'Space') {
-    jump();
-  }
-});
-
-function moveBlock() {
-  let currentPosition = parseInt(window.getComputedStyle(block).getPropertyValue('right'));
-  if (currentPosition === 50) {
-    score++;
-    scoreDisplay.textContent = `Score: ${score}`;
-  } else if (currentPosition === 0) {
-    clearInterval(blockTimerId);
-    gameOverDisplay.style.display = 'block';
-    finalScoreDisplay.textContent = score;
-    restartButton.style.display = 'block';
-  } else if (currentPosition <= 60 && currentPosition >= 0) {
-    let characterPosition = parseInt(window.getComputedStyle(character).getPropertyValue('left'));
-    if (characterPosition === 50) {
-      clearInterval(blockTimerId);
-      gameOverDisplay.style.display = 'block';
-      finalScoreDisplay.textContent = score;
-      restartButton.style.display = 'block';
-    }
-  }
-  currentPosition -= 2;
-  block.style.right = currentPosition + 'px';
-}
-
-let blockTimerId = setInterval(moveBlock, 20);
-
-restartButton.addEventListener('click', function () {
-  isJumping = false;
-  score = 0;
-  scoreDisplay.textContent = 'Score: 0';
-  gameOverDisplay.style.display = 'none';
-  restartButton.style.display = 'none';
-  block.style.right = '0';
-  blockTimerId = setInterval(moveBlock, 20);
-});
-
-    </script>
+    </div>
+    <div id="score">Score : 0</div>
+    <button id="start">Start Game</button>
+    <script src="script.js"></script>
 </body>
 </html>
