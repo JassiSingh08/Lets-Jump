@@ -43,7 +43,7 @@ var checkdead = setInterval(function(){
   var charactertop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
   var blockleft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
   
-  if(blockleft<50 && blockleft>0 && charactertop>=180){
+  if(blockleft<80 && blockleft>0 && charactertop>=180){
     block.classList.remove('animateblock');
     alert("Game Over. Score is " +score+ ".");
     score = 0;
