@@ -2,8 +2,7 @@
 
  🔊 INTRODUCTION : 
  
-Heard of Chrome Dinosaur game? Yes that game when there is no Internet connection and a game appears on the web page.
-I tried to create my version of that game using HTML, CSS and Javascript. Lets call it Highway Runner may be? or Lets Jump?
+Heard of the Chrome Dinosaur game? Yes, that game when there is no Internet connection and a game appears on the web page. I tried to create my version of that game using HTML, CSS, and Javascript. Let's call it Highway Runner may be? or Lets Jump?
 
 🖋 Customisations :
 
