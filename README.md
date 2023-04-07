@@ -7,7 +7,7 @@ Heard of the Chrome Dinosaur game? Yes, that game when there is no Internet conn
 🖋 Customisations :
 
 Includes a Character (.gif) and a car (png Image) and a background image.
-Added Game engine via "Set Interval" method and used properted like "Add" class list to both character and the block 
+Added Game engine via "Set Interval" method and used properted like "Add" class list to both character and the block.
 
 🗺 Working : 
 
